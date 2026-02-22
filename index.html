@@ -42,15 +42,15 @@
         <div class="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div class="p-5 bg-white rounded-lg">
                 <p class="font-[14px] text[#323B49]">Total</p>
-                <p class="text-[#002c5c] font-semibold text-xl mt-2">0</p>
+                <p id="totalCount"  class="text-[#002c5c] font-semibold text-xl mt-2">0</p>
             </div>
             <div class="p-5 bg-white rounded-lg">
-                <p class="font-[14px] text[#323B49]">Interview</p>
-                <p class="text-[#10B981] font-semibold text-xl mt-2">0</p>
+                <p  class="font-[14px] text[#323B49]">Interview</p>
+                <p id="interview-count" class="text-[#10B981] font-semibold text-xl mt-2">0</p>
             </div>
             <div class="p-5 bg-white rounded-lg">
                 <p class="font-[14px] text[#323B49]">Rejected</p>
-                <p class="text-[#EF4444] font-semibold text-xl mt-2">0</p>
+                <p id="rejected-count" class="text-[#EF4444] font-semibold text-xl mt-2">0</p>
             </div>
         </div>
         <hr class="border-t border-[#bbbbbb] my-8 mt-7  ">
@@ -65,10 +65,10 @@
             </div>
 
             <!-- Card Section -->
-            <section class="mt-4">
+            <section class="mt-4" id="card">
 
                 <!-- Card 1 -->
-                <div class="card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
+                <div class=" card-design card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
 
                     <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
                         <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
@@ -113,7 +113,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
+                <div class="card-design card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
 
                     <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
                         <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
@@ -158,7 +158,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
+                <div class="card-design card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
 
                     <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
                         <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
@@ -202,7 +202,7 @@
 
                 </div>
                 <!-- Card 4 -->
-                <div class="card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
+                <div class="card-design card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
 
                     <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
                         <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
@@ -247,7 +247,7 @@
                 </div>
 
                 <!-- Card 5 -->
-                <div class="card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
+                <div class="card-design card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
 
                     <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
                         <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
@@ -292,7 +292,7 @@
                 </div>
 
                 <!-- Card 6 -->
-                <div class="card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
+                <div class="card-design card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
 
                     <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
                         <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
@@ -337,7 +337,7 @@
                 </div>
 
                 <!-- Card 7 -->
-                <div class="card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
+                <div class="card-design card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
 
                     <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
                         <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
@@ -382,7 +382,7 @@
                 </div>
 
                 <!-- Card 8 -->
-                <div class="card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
+                <div class="card-design card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
 
                     <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
                         <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
@@ -425,6 +425,8 @@
                     </div>
 
                 </div>
+
+                
 
             </section>
         </div>
