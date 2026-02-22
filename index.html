@@ -18,15 +18,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-<body class="geist-font bg-[#F8FAFC]">
+<body class="geist-font bg-[#F8FAFC] pt-[15px] md:pt-[30px] lg:pt-[60px]">
     <!-- header seciton -->
-    <header class="ml-2.5 mr-2.5 mt-2.5 md:ml-6 md:mr-6 lg:mt-[60px] lg:ml-[245px] lg:mr-[245px]">
+    <header class="ml-2.5 mr-2.5 mt-2.5 md:ml-6 md:mr-6  lg:ml-[245px] lg:mr-[245px]">
         <h4 class="text-[#002c5c] text-4xl font-semibold">Job Application Tracker</h4>
 
+
+    </header>
+    
+
+    <!-- main section -->
+    <main class="ml-2.5 mr-2.5 md:ml-6 md:mr-6 lg:ml-[245px] lg:mr-[245px] ">
         <!-- Count  -->
         <div class="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div class="p-5 bg-white rounded-lg">
@@ -42,11 +53,7 @@
                 <p class="text-[#EF4444] font-semibold text-xl mt-2">0</p>
             </div>
         </div>
-    </header>
-    <hr class="border-t border-[#bbbbbb] my-8 mt-7  ml-2.5 mr-2.5  md:ml-6 md:mr-6 lg:ml-[245px] lg:mr-[245px]">
-
-    <!-- main section -->
-    <main class="ml-2.5 mr-2.5 md:ml-6 md:mr-6 lg:ml-[245px] lg:mr-[245px] ">
+        <hr class="border-t border-[#bbbbbb] my-8 mt-7  ">
         <h4 class="text-[#002c5c] text-2xl font-semibold">Available Jobs</h4>
 
         <div class="mt-6">
@@ -56,6 +63,370 @@
                 <button class="btn  text-slate-500 py-2.5 border-slate-500 px-8 rounded-sm mx-2">Interview</button>
                 <button class="btn  text-slate-500 py-2.5 border-slate-500 px-8 rounded-sm">Rejected</button>
             </div>
+
+            <!-- Card Section -->
+            <section class="mt-4">
+
+                <!-- Card 1 -->
+                <div class="card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
+
+                    <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
+                        <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
+                    </button>
+
+                    <div class="mb-2">
+                        <h2 class="text-2xl font-bold text-[#1e3a8a]">Mobile First Corp</h2>
+                        <p class="text-gray-400 font-normal mt-1 text-[14px]">React Native Developer</p>
+                    </div>
+
+                    <div class="flex gap-2 text-gray-400 text-sm mb-4">
+                        <span>Remote</span>
+                        <span>•</span>
+                        <span>Full-time</span>
+                        <span>•</span>
+                        <span>$130,000 - $175,000</span>
+                    </div>
+
+                    <div class="mb-4">
+                        <span
+                            class="bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
+                            NOT APPLIED
+                        </span>
+                    </div>
+
+                    <p class="text-gray-700 text-sm mb-6 max-w-3xl">
+                        Build cross-platform mobile applications using React Native. Work on products used by millions
+                        of users worldwide.
+                    </p>
+
+                    <div class="flex gap-2">
+                        <button
+                            class="btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
+                            INTERVIEW
+                        </button>
+                        <button
+                            class="btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
+                            REJECTED
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
+
+                    <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
+                        <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
+                    </button>
+
+                    <div class="mb-2">
+                        <h2 class="text-2xl font-bold text-[#1e3a8a]">WebFlow Agency</h2>
+                        <p class="text-gray-400 font-normal mt-1 text-[14px]">Web Designer & Developer</p>
+                    </div>
+
+                    <div class="flex gap-2 text-gray-400 text-sm mb-4">
+                        <span>Los Angeles, CA</span>
+                        <span>•</span>
+                        <span>Part-time</span>
+                        <span>•</span>
+                        <span>$80,000 - $120,000</span>
+                    </div>
+
+                    <div class="mb-4">
+                        <span
+                            class="bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
+                            NOT APPLIED
+                        </span>
+                    </div>
+
+                    <p class="text-gray-700 text-sm mb-6 max-w-3xl">
+                        Create stunning web experiences for high-profile clients. Must have portfolio and experience
+                        with modern web design trends.
+                    </p>
+
+                    <div class="flex gap-2">
+                        <button
+                            class="btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
+                            INTERVIEW
+                        </button>
+                        <button
+                            class="btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
+                            REJECTED
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
+
+                    <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
+                        <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
+                    </button>
+
+                    <div class="mb-2">
+                        <h2 class="text-2xl font-bold text-[#1e3a8a]">DataViz Solutions</h2>
+                        <p class="text-gray-400 font-normal mt-1 text-[14px]">Data Visualization Specialist</p>
+                    </div>
+
+                    <div class="flex gap-2 text-gray-400 text-sm mb-4">
+                        <span>Boston, MA </span>
+                        <span>•</span>
+                        <span>Full-time</span>
+                        <span>•</span>
+                        <span>$125,000 - $165,000</span>
+                    </div>
+
+                    <div class="mb-4">
+                        <span
+                            class="bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
+                            NOT APPLIED
+                        </span>
+                    </div>
+
+                    <p class="text-gray-700 text-sm mb-6 max-w-3xl">
+                        Build cross-platform mobile applications using React Native. Work on products used by millions
+                        of users worldwide.
+                    </p>
+
+                    <div class="flex gap-2">
+                        <button
+                            class="btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
+                            INTERVIEW
+                        </button>
+                        <button
+                            class="btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
+                            REJECTED
+                        </button>
+                    </div>
+
+                </div>
+                <!-- Card 4 -->
+                <div class="card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
+
+                    <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
+                        <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
+                    </button>
+
+                    <div class="mb-2">
+                        <h2 class="text-2xl font-bold text-[#1e3a8a]">CloudFirst Inc</h2>
+                        <p class="text-gray-400 font-normal mt-1 text-[14px]">UI/UX Engineer</p>
+                    </div>
+
+                    <div class="flex gap-2 text-gray-400 text-sm mb-4">
+                        <span>Austin, TX</span>
+                        <span>•</span>
+                        <span>Full-time</span>
+                        <span>•</span>
+                        <span>$110,000 - $150,000</span>
+                    </div>
+
+                    <div class="mb-4">
+                        <span
+                            class="bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
+                            NOT APPLIED
+                        </span>
+                    </div>
+
+                    <p class="text-gray-700 text-sm mb-6 max-w-3xl">
+                        Build cross-platform mobile applications using React Native. Work on products used by millions
+                        of users worldwide.
+                    </p>
+
+                    <div class="flex gap-2">
+                        <button
+                            class="btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
+                            INTERVIEW
+                        </button>
+                        <button
+                            class="btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
+                            REJECTED
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
+
+                    <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
+                        <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
+                    </button>
+
+                    <div class="mb-2">
+                        <h2 class="text-2xl font-bold text-[#1e3a8a]">MegaCorp Solutions</h2>
+                        <p class="text-gray-400 font-normal mt-1 text-[14px]">JavaScript Developer</p>
+                    </div>
+
+                    <div class="flex gap-2 text-gray-400 text-sm mb-4">
+                        <span>New York, NY</span>
+                        <span>•</span>
+                        <span>Full-time</span>
+                        <span>•</span>
+                        <span>$130,000 - $175,000</span>
+                    </div>
+
+                    <div class="mb-4">
+                        <span
+                            class="bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
+                            NOT APPLIED
+                        </span>
+                    </div>
+
+                    <p class="text-gray-700 text-sm mb-6 max-w-3xl">
+                        Build cross-platform mobile applications using React Native. Work on products used by millions
+                        of users worldwide.
+                    </p>
+
+                    <div class="flex gap-2">
+                        <button
+                            class="btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
+                            INTERVIEW
+                        </button>
+                        <button
+                            class="btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
+                            REJECTED
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
+
+                    <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
+                        <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
+                    </button>
+
+                    <div class="mb-2">
+                        <h2 class="text-2xl font-bold text-[#1e3a8a]">StartupXYZ</h2>
+                        <p class="text-gray-400 font-normal mt-1 text-[14px]">Full Stack Engineer</p>
+                    </div>
+
+                    <div class="flex gap-2 text-gray-400 text-sm mb-4">
+                        <span>Remote</span>
+                        <span>•</span>
+                        <span>Full-time</span>
+                        <span>•</span>
+                        <span>$120,000 - $160,000</span>
+                    </div>
+
+                    <div class="mb-4">
+                        <span
+                            class="bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
+                            NOT APPLIED
+                        </span>
+                    </div>
+
+                    <p class="text-gray-700 text-sm mb-6 max-w-3xl">
+                        Build cross-platform mobile applications using React Native. Work on products used by millions
+                        of users worldwide.
+                    </p>
+
+                    <div class="flex gap-2">
+                        <button
+                            class="btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
+                            INTERVIEW
+                        </button>
+                        <button
+                            class="btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
+                            REJECTED
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Card 7 -->
+                <div class="card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
+
+                    <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
+                        <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
+                    </button>
+
+                    <div class="mb-2">
+                        <h2 class="text-2xl font-bold text-[#1e3a8a]">TechCorp Industries</h2>
+                        <p class="text-gray-400 font-normal mt-1 text-[14px]">Senior Frontend Developer</p>
+                    </div>
+
+                    <div class="flex gap-2 text-gray-400 text-sm mb-4">
+                        <span>San Francisco, CA</span>
+                        <span>•</span>
+                        <span>Full-time</span>
+                        <span>•</span>
+                        <span>$130,000 - $175,000</span>
+                    </div>
+
+                    <div class="mb-4">
+                        <span
+                            class="bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
+                            NOT APPLIED
+                        </span>
+                    </div>
+
+                    <p class="text-gray-700 text-sm mb-6 max-w-3xl">
+                        Build cross-platform mobile applications using React Native. Work on products used by millions
+                        of users worldwide.
+                    </p>
+
+                    <div class="flex gap-2">
+                        <button
+                            class="btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
+                            INTERVIEW
+                        </button>
+                        <button
+                            class="btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
+                            REJECTED
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Card 8 -->
+                <div class="card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
+
+                    <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
+                        <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
+                    </button>
+
+                    <div class="mb-2">
+                        <h2 class="text-2xl font-bold text-[#1e3a8a]">Innovation Labs</h2>
+                        <p class="text-gray-400 font-normal mt-1 text-[14px]">Backend Developer</p>
+                    </div>
+
+                    <div class="flex gap-2 text-gray-400 text-sm mb-4">
+                        <span>Seattle, WA</span>
+                        <span>•</span>
+                        <span>Full-time</span>
+                        <span>•</span>
+                        <span>$140,000 - $190,000</span>
+                    </div>
+
+                    <div class="mb-4">
+                        <span
+                            class="bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
+                            NOT APPLIED
+                        </span>
+                    </div>
+
+                    <p class="text-gray-700 text-sm mb-6 max-w-3xl">
+                        Build cross-platform mobile applications using React Native. Work on products used by millions
+                        of users worldwide.
+                    </p>
+
+                    <div class="flex gap-2">
+                        <button
+                            class="btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
+                            INTERVIEW
+                        </button>
+                        <button
+                            class="btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
+                            REJECTED
+                        </button>
+                    </div>
+
+                </div>
+
+            </section>
         </div>
 
     </main>
