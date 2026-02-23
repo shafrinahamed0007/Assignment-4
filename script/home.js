@@ -6,6 +6,8 @@ const total = document.getElementById("totalCount");
 const totalInterview = document.getElementById("interview-count");
 const totalRejected = document.getElementById("rejected-count");
 
+console.log(totalInterview);
+
 const addCards = document.getElementById("card");
 const mainContainer = document.querySelector("main");
 
@@ -14,11 +16,35 @@ const btnAll = document.getElementById("btn-all");
 const btnInterview = document.getElementById("btn-interview");
 const btnRejected = document.getElementById("btn-rejected");
 
+// total Count
 function totalCalculate() {
   total.innerText = addCards.children.length;
 }
 
+// interview & rejected count
+function interviewSelectedAndRejectedCount() {
+  const cards = document.getElementsByClassName("card-design");
+  let interViewCount = 0;
+  let rejectedCount = 0;
+
+  for (let card of cards) {
+    const statusJob = card.querySelector(".jobStatus").innerText.toUpperCase();
+
+    if (statusJob == "SELECTED") {
+      interViewCount++;
+    }
+
+    if (statusJob == "REJECTED") {
+      rejectedCount++;
+    }
+  }
+
+  totalInterview.innerText = interViewCount;
+  totalRejected.innerText = rejectedCount;
+}
+
 totalCalculate();
+interviewSelectedAndRejectedCount();
 
 // toggle button function
 function toggleStyle(id) {
@@ -35,6 +61,8 @@ function toggleStyle(id) {
   const selectedBtn = document.getElementById(id);
   selectedBtn.classList.remove("bg-white", "text-black");
   selectedBtn.classList.add("bg-[#3b82f6]", "text-white");
+
+  interviewSelectedAndRejectedCount();
 }
 
 mainContainer.addEventListener("click", function (event) {
@@ -69,6 +97,7 @@ mainContainer.addEventListener("click", function (event) {
       "text-red-600",
     );
     jobTitle.classList.add("border", "border-green-600", "text-green-600");
+    interviewSelectedAndRejectedCount();
   } else if (event.target.classList.contains("rejected-btn")) {
     parentNode.querySelector(".jobStatus").innerText = "Rejected";
     const jobTitle = parentNode.querySelector(".jobStatus");
@@ -88,8 +117,10 @@ mainContainer.addEventListener("click", function (event) {
     );
 
     jobTitle.classList.add("border", "border-red-600", "text-red-600");
+    interviewSelectedAndRejectedCount();
   } else if (event.target.closest(".deleteBtn")) {
     parentNode.remove();
     totalCalculate();
+    interviewSelectedAndRejectedCount();
   }
 });
