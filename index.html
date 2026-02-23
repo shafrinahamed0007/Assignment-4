@@ -34,9 +34,6 @@
     </header>
 
 
-
-
-
     <!-- main section -->
     <main class="ml-2.5 mr-2.5 md:ml-6 md:mr-6 lg:ml-[245px] lg:mr-[245px] ">
         <!-- Count  -->
@@ -55,7 +52,10 @@
             </div>
         </div>
         <hr class="border-t border-[#bbbbbb] my-8 mt-7  ">
-        <h4 class="text-[#002c5c] text-2xl font-semibold ">Available Jobs</h4>
+        <div class="flex justify-between">
+            <h4 class="text-[#002c5c] text-2xl font-semibold ">Available Jobs</h4>
+            <p class="text-[#64748B]"><span id="totalJobs">0</span> jobs</p>
+        </div>
 
         <div class="mt-6">
             <!-- Actionable Button -->
@@ -74,7 +74,7 @@
             </section>
 
             <!-- Card Section -->
-            <section class="mt-4" id="card">
+            <section class="mt-4 " id="allCard">
 
                 <!-- Card 1 -->
                 <div id="cardDesign"

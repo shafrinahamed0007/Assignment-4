@@ -5,10 +5,11 @@ let totalRejectedInterview = [];
 const total = document.getElementById("totalCount");
 const totalInterview = document.getElementById("interview-count");
 const totalRejected = document.getElementById("rejected-count");
+const totalJobs = document.getElementById("totalJobs");
 
-console.log(totalInterview);
+// console.log(totalSelectedInterview.length, totalRejectedInterview.length);
 
-const addCards = document.getElementById("card");
+const addCards = document.getElementById("allCard");
 const mainContainer = document.querySelector("main");
 
 // Actionable Toggle Button
@@ -19,6 +20,7 @@ const btnRejected = document.getElementById("btn-rejected");
 // total Count
 function totalCalculate() {
   total.innerText = addCards.children.length;
+  totalJobs.innerText = addCards.children.length;
 }
 
 // interview & rejected count
@@ -61,6 +63,23 @@ function toggleStyle(id) {
   const selectedBtn = document.getElementById(id);
   selectedBtn.classList.remove("bg-white", "text-black");
   selectedBtn.classList.add("bg-[#3b82f6]", "text-white");
+
+
+  // clicked All Button 
+  if (id == "btn-all") {
+    addCards.classList.remove("hidden");
+  }
+
+  // clicked Interview Button
+  if (id == "btn-interview") {
+    addCards.classList.add("hidden");
+  }
+
+  // clicked Rejected Button
+  if(id== "btn-rejected"){
+    allcards.classList.add("hidden");
+  }
+  
 
   interviewSelectedAndRejectedCount();
 }
