@@ -6,15 +6,16 @@ const total = document.getElementById("totalCount");
 const totalInterview = document.getElementById("interview-count");
 const totalRejected = document.getElementById("rejected-count");
 
+const addCards = document.getElementById("card");
+const mainContainer = document.querySelector("main");
+
 // Actionable Toggle Button
 const btnAll = document.getElementById("btn-all");
 const btnInterview = document.getElementById("btn-interview");
 const btnRejected = document.getElementById("btn-rejected");
 
-const totalJobs = document.getElementById("card");
-
 function totalCalculate() {
-  total.innerText = totalJobs.children.length;
+  total.innerText = addCards.children.length;
 }
 
 totalCalculate();
@@ -30,13 +31,46 @@ function toggleStyle(id) {
   btnAll.classList.add("bg-white", "text-black");
   btnInterview.classList.add("bg-white", "text-black");
   btnRejected.classList.add("bg-white", "text-black");
- 
 
   const selectedBtn = document.getElementById(id);
   selectedBtn.classList.remove("bg-white", "text-black");
   selectedBtn.classList.add("bg-[#3b82f6]", "text-white");
-
-  
-
-
 }
+
+mainContainer.addEventListener("click", function (event) {
+  const parentNode = event.target.parentNode.parentNode;
+
+  // card info
+  const title = parentNode.querySelector(".title").innerText;
+  const position = parentNode.querySelector(".position").innerText;
+  const jobStatus = parentNode.querySelector(".jobStatus").innerText;
+  const jobInfo = parentNode.querySelector(".jobInfo").innerText;
+  const jobDetails = parentNode.querySelector(".jobDetails").innerText;
+
+  console.log(title, position, jobStatus, jobInfo, jobDetails);
+
+  if (event.target.classList.contains("interview-btn")) {
+    parentNode.querySelector(".jobStatus").innerText = "Selected";
+    const jobTitle = parentNode.querySelector(".jobStatus");
+
+    jobTitle.classList.remove(
+      "bg-[#eef4ff]",
+      "text-[#002c5c]",
+      "border-red-600",
+      "text-red-600",
+    );
+    jobTitle.classList.add("border", "border-green-600", "text-green-600");
+  } else if (event.target.classList.contains("rejected-btn")) {
+    parentNode.querySelector(".jobStatus").innerText = "Rejected";
+    const jobTitle = parentNode.querySelector(".jobStatus");
+
+    jobTitle.classList.remove(
+      "bg-[#eef4ff]",
+      "text-[#002c5c]",
+      "border-green-600",
+      "text-green-600",
+    );
+
+    jobTitle.classList.add("border", "border-red-600", "text-red-600");
+  }
+});
