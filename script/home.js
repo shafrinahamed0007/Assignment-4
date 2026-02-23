@@ -46,12 +46,21 @@ mainContainer.addEventListener("click", function (event) {
   const jobStatus = parentNode.querySelector(".jobStatus").innerText;
   const jobInfo = parentNode.querySelector(".jobInfo").innerText;
   const jobDetails = parentNode.querySelector(".jobDetails").innerText;
+  // const deleteCard = parentNode.querySelector(".deleteBtn");
+  const parentCardDiv = event.target.closest(".card-design");
 
-  console.log(title, position, jobStatus, jobInfo, jobDetails);
+  // console.log(title, position, jobStatus, jobInfo, jobDetails);
 
   if (event.target.classList.contains("interview-btn")) {
     parentNode.querySelector(".jobStatus").innerText = "Selected";
     const jobTitle = parentNode.querySelector(".jobStatus");
+
+    parentCardDiv.classList.remove(
+      "border",
+      "border-gray-100",
+      "border-red-600",
+    );
+    parentCardDiv.classList.add("border-l-4", "border-green-600");
 
     jobTitle.classList.remove(
       "bg-[#eef4ff]",
@@ -64,6 +73,13 @@ mainContainer.addEventListener("click", function (event) {
     parentNode.querySelector(".jobStatus").innerText = "Rejected";
     const jobTitle = parentNode.querySelector(".jobStatus");
 
+    parentCardDiv.classList.remove(
+      "border",
+      "border-gray-100",
+      "border-green-600",
+    );
+    parentCardDiv.classList.add("border-l-4", "border-red-600");
+
     jobTitle.classList.remove(
       "bg-[#eef4ff]",
       "text-[#002c5c]",
@@ -72,5 +88,8 @@ mainContainer.addEventListener("click", function (event) {
     );
 
     jobTitle.classList.add("border", "border-red-600", "text-red-600");
+  } else if (event.target.closest(".deleteBtn")) {
+    parentNode.remove();
+    totalCalculate();
   }
 });
