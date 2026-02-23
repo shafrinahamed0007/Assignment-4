@@ -54,14 +54,14 @@
             </div>
         </div>
         <hr class="border-t border-[#bbbbbb] my-8 mt-7  ">
-        <h4 class="text-[#002c5c] text-2xl font-semibold">Available Jobs</h4>
+        <h4 class="text-[#002c5c] text-2xl font-semibold ">Available Jobs</h4>
 
         <div class="mt-6">
             <!-- Actionable Button -->
             <div>
-                <button class="btn bg-[#3B82F6] text-white py-2.5 px-8 rounded-sm">All</button>
-                <button class="btn  text-slate-500 py-2.5 border-slate-500 px-8 rounded-sm mx-2">Interview</button>
-                <button class="btn  text-slate-500 py-2.5 border-slate-500 px-8 rounded-sm">Rejected</button>
+                <button onclick="toggleStyle('btn-all')" id="btn-all" class="btn bg-[#3B82F6] text-white py-2.5 px-8 border-slate-500 rounded-sm">All</button>
+                <button onclick="toggleStyle('btn-interview')" id="btn-interview" class="btn bg-white  text-slate-500 py-2.5 border-slate-500 px-8 rounded-sm mx-2">Interview</button>
+                <button onclick="toggleStyle('btn-rejected')" id="btn-rejected" class="btn bg-white  text-slate-500 py-2.5 border-slate-500 px-8 rounded-sm">Rejected</button>
             </div>
 
             <!-- Card Section -->
@@ -70,13 +70,13 @@
                 <!-- Card 1 -->
                 <div class=" card-design card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
 
-                    <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
+                    <button class="deleteBtn absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
                         <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
                     </button>
 
                     <div class="mb-2">
-                        <h2 class="text-2xl font-bold text-[#1e3a8a]">Mobile First Corp</h2>
-                        <p class="text-gray-400 font-normal mt-1 text-[14px]">React Native Developer</p>
+                        <h2 class="title text-2xl font-bold text-[#1e3a8a]">Mobile First Corp</h2>
+                        <p class="position text-gray-400 font-normal mt-1 text-[14px]">React Native Developer</p>
                     </div>
 
                     <div class="flex gap-2 text-gray-400 text-sm mb-4">
@@ -89,7 +89,7 @@
 
                     <div class="mb-4">
                         <span
-                            class="bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
+                            class="jobStatus  bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
                             NOT APPLIED
                         </span>
                     </div>
@@ -101,11 +101,11 @@
 
                     <div class="flex gap-2">
                         <button
-                            class="btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
+                            class="interview-btn btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
                             INTERVIEW
                         </button>
                         <button
-                            class="btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
+                            class="rejected-btn btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
                             REJECTED
                         </button>
                     </div>
@@ -115,13 +115,13 @@
                 <!-- Card 2 -->
                 <div class="card-design card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
 
-                    <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
+                    <button class="deleteBtn absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
                         <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
                     </button>
 
                     <div class="mb-2">
-                        <h2 class="text-2xl font-bold text-[#1e3a8a]">WebFlow Agency</h2>
-                        <p class="text-gray-400 font-normal mt-1 text-[14px]">Web Designer & Developer</p>
+                        <h2 class="title text-2xl font-bold text-[#1e3a8a]">WebFlow Agency</h2>
+                        <p class="position text-gray-400 font-normal mt-1 text-[14px]">Web Designer & Developer</p>
                     </div>
 
                     <div class="flex gap-2 text-gray-400 text-sm mb-4">
@@ -134,7 +134,7 @@
 
                     <div class="mb-4">
                         <span
-                            class="bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
+                            class="jobStatus  bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
                             NOT APPLIED
                         </span>
                     </div>
@@ -146,11 +146,11 @@
 
                     <div class="flex gap-2">
                         <button
-                            class="btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
+                            class="interview-btn btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
                             INTERVIEW
                         </button>
                         <button
-                            class="btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
+                            class="rejected-btn btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
                             REJECTED
                         </button>
                     </div>
@@ -160,13 +160,13 @@
                 <!-- Card 3 -->
                 <div class="card-design card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
 
-                    <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
+                    <button class="deleteBtn absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
                         <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
                     </button>
 
                     <div class="mb-2">
-                        <h2 class="text-2xl font-bold text-[#1e3a8a]">DataViz Solutions</h2>
-                        <p class="text-gray-400 font-normal mt-1 text-[14px]">Data Visualization Specialist</p>
+                        <h2 class="title text-2xl font-bold text-[#1e3a8a]">DataViz Solutions</h2>
+                        <p class="position text-gray-400 font-normal mt-1 text-[14px]">Data Visualization Specialist</p>
                     </div>
 
                     <div class="flex gap-2 text-gray-400 text-sm mb-4">
@@ -179,7 +179,7 @@
 
                     <div class="mb-4">
                         <span
-                            class="bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
+                            class="jobStatus  bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
                             NOT APPLIED
                         </span>
                     </div>
@@ -191,11 +191,11 @@
 
                     <div class="flex gap-2">
                         <button
-                            class="btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
+                            class="interview-btn btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
                             INTERVIEW
                         </button>
                         <button
-                            class="btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
+                            class="rejected-btn btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
                             REJECTED
                         </button>
                     </div>
@@ -204,13 +204,13 @@
                 <!-- Card 4 -->
                 <div class="card-design card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
 
-                    <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
+                    <button class="deleteBtn absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
                         <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
                     </button>
 
                     <div class="mb-2">
-                        <h2 class="text-2xl font-bold text-[#1e3a8a]">CloudFirst Inc</h2>
-                        <p class="text-gray-400 font-normal mt-1 text-[14px]">UI/UX Engineer</p>
+                        <h2 class="title text-2xl font-bold text-[#1e3a8a]">CloudFirst Inc</h2>
+                        <p class="position text-gray-400 font-normal mt-1 text-[14px]">UI/UX Engineer</p>
                     </div>
 
                     <div class="flex gap-2 text-gray-400 text-sm mb-4">
@@ -223,7 +223,7 @@
 
                     <div class="mb-4">
                         <span
-                            class="bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
+                            class="jobStatus  bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
                             NOT APPLIED
                         </span>
                     </div>
@@ -235,11 +235,11 @@
 
                     <div class="flex gap-2">
                         <button
-                            class="btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
+                            class="interview-btn btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
                             INTERVIEW
                         </button>
                         <button
-                            class="btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
+                            class="rejected-btn btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
                             REJECTED
                         </button>
                     </div>
@@ -249,13 +249,13 @@
                 <!-- Card 5 -->
                 <div class="card-design card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
 
-                    <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
+                    <button class="deleteBtn absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
                         <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
                     </button>
 
                     <div class="mb-2">
-                        <h2 class="text-2xl font-bold text-[#1e3a8a]">MegaCorp Solutions</h2>
-                        <p class="text-gray-400 font-normal mt-1 text-[14px]">JavaScript Developer</p>
+                        <h2 class="title text-2xl font-bold text-[#1e3a8a]">MegaCorp Solutions</h2>
+                        <p class="position text-gray-400 font-normal mt-1 text-[14px]">JavaScript Developer</p>
                     </div>
 
                     <div class="flex gap-2 text-gray-400 text-sm mb-4">
@@ -268,7 +268,7 @@
 
                     <div class="mb-4">
                         <span
-                            class="bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
+                            class="jobStatus  bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
                             NOT APPLIED
                         </span>
                     </div>
@@ -280,11 +280,11 @@
 
                     <div class="flex gap-2">
                         <button
-                            class="btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
+                            class="interview-btn btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
                             INTERVIEW
                         </button>
                         <button
-                            class="btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
+                            class="rejected-btn btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
                             REJECTED
                         </button>
                     </div>
@@ -294,13 +294,13 @@
                 <!-- Card 6 -->
                 <div class="card-design card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
 
-                    <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
+                    <button class="deleteBtn absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
                         <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
                     </button>
 
                     <div class="mb-2">
-                        <h2 class="text-2xl font-bold text-[#1e3a8a]">StartupXYZ</h2>
-                        <p class="text-gray-400 font-normal mt-1 text-[14px]">Full Stack Engineer</p>
+                        <h2 class="title text-2xl font-bold text-[#1e3a8a]">StartupXYZ</h2>
+                        <p class="position text-gray-400 font-normal mt-1 text-[14px]">Full Stack Engineer</p>
                     </div>
 
                     <div class="flex gap-2 text-gray-400 text-sm mb-4">
@@ -313,7 +313,7 @@
 
                     <div class="mb-4">
                         <span
-                            class="bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
+                            class="jobStatus  bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
                             NOT APPLIED
                         </span>
                     </div>
@@ -325,11 +325,11 @@
 
                     <div class="flex gap-2">
                         <button
-                            class="btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
+                            class="interview-btn btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
                             INTERVIEW
                         </button>
                         <button
-                            class="btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
+                            class="rejected-btn btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
                             REJECTED
                         </button>
                     </div>
@@ -339,13 +339,13 @@
                 <!-- Card 7 -->
                 <div class="card-design card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
 
-                    <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
+                    <button class="deleteBtn absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
                         <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
                     </button>
 
                     <div class="mb-2">
-                        <h2 class="text-2xl font-bold text-[#1e3a8a]">TechCorp Industries</h2>
-                        <p class="text-gray-400 font-normal mt-1 text-[14px]">Senior Frontend Developer</p>
+                        <h2 class="title text-2xl font-bold text-[#1e3a8a]">TechCorp Industries</h2>
+                        <p class="position text-gray-400 font-normal mt-1 text-[14px]">Senior Frontend Developer</p>
                     </div>
 
                     <div class="flex gap-2 text-gray-400 text-sm mb-4">
@@ -358,7 +358,7 @@
 
                     <div class="mb-4">
                         <span
-                            class="bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
+                            class="jobStatus  bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
                             NOT APPLIED
                         </span>
                     </div>
@@ -370,11 +370,11 @@
 
                     <div class="flex gap-2">
                         <button
-                            class="btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
+                            class="interview-btn btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
                             INTERVIEW
                         </button>
                         <button
-                            class="btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
+                            class="rejected-btn btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
                             REJECTED
                         </button>
                     </div>
@@ -384,13 +384,13 @@
                 <!-- Card 8 -->
                 <div class="card-design card w-full bg-base-100 shadow-sm border border-gray-100 p-6 rounded-lg relative mb-4">
 
-                    <button class="absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
+                    <button class="deleteBtn absolute  right-4 top-4 w-10 h-10 bg-gray-100 hover:bg-gray-300 rounded-2xl ">
                         <i class="fa-solid fa-trash-can text-lg   transition-colors"></i>
                     </button>
 
                     <div class="mb-2">
-                        <h2 class="text-2xl font-bold text-[#1e3a8a]">Innovation Labs</h2>
-                        <p class="text-gray-400 font-normal mt-1 text-[14px]">Backend Developer</p>
+                        <h2 class="title text-2xl font-bold text-[#1e3a8a]">Innovation Labs</h2>
+                        <p class="position text-gray-400 font-normal mt-1 text-[14px]">Backend Developer</p>
                     </div>
 
                     <div class="flex gap-2 text-gray-400 text-sm mb-4">
@@ -403,7 +403,7 @@
 
                     <div class="mb-4">
                         <span
-                            class="bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
+                            class="jobStatus  bg-[#eef4ff] text-[#002C5C] text-[14px] font-semibold  py-2 px-3 rounded uppercase tracking-wider">
                             NOT APPLIED
                         </span>
                     </div>
@@ -415,11 +415,11 @@
 
                     <div class="flex gap-2">
                         <button
-                            class="btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
+                            class="interview-btn btn btn-outline btn-success btn-sm px-5 border-[#22c55e] text-[#22c55e] hover:bg-[#22c55e] hover:border-[#22c55e] hover:text-white">
                             INTERVIEW
                         </button>
                         <button
-                            class="btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
+                            class="rejected-btn btn btn-outline btn-error btn-sm px-5 border-[#f87171] text-[#f87171] hover:bg-[#f87171] hover:border-[#f87171] hover:text-white">
                             REJECTED
                         </button>
                     </div>
