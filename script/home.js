@@ -145,7 +145,45 @@ mainContainer.addEventListener("click", function (event) {
   }
 });
 
-// empty card show
-function showEmptyCard(count){
-  let emptyMsg = document.get
+function totalCalculate() {
+  const container = document.getElementById("allCard");
+
+  const actualCards = container.querySelectorAll(".card-design").length;
+
+  total.innerText = actualCards;
+  totalJobs.innerText = actualCards;
+
+  updateEmptyStatus();
 }
+
+if (event.target.closest(".deleteBtn")) {
+  parentNode.remove();
+  totalCalculate();
+  interviewSelectedAndRejectedCount();
+}
+
+function updateEmptyStatus() {
+  const container = document.getElementById("allCard");
+
+  if (
+    container.children.length === 0 ||
+    (container.children.length === 1 &&
+      container.children[0].id === "empty-message")
+  ) {
+    let emptyCardDesign = `
+    <div id="empty-message" class="flex flex-col items-center justify-center py-20 w-full col-span-full text-center">
+        <div class="mb-4 p-6 bg-blue-50 rounded-full inline-block">
+            <i class="fa-solid fa-file-lines text-6xl" style="color: rgb(116, 192, 252);"></i>
+        </div>
+        
+        <h2 class="text-2xl font-bold text-gray-700 mb-2">No jobs available</h2>
+        <p class="text-gray-500 max-w-sm mx-auto">
+            Check back soon for new job oppo
+        </p>
+    </div>`;
+
+    container.innerHTML = emptyCardDesign;
+  }
+}
+
+totalCalculate();
