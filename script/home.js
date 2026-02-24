@@ -64,8 +64,7 @@ function toggleStyle(id) {
   selectedBtn.classList.remove("bg-white", "text-black");
   selectedBtn.classList.add("bg-[#3b82f6]", "text-white");
 
-
-  // clicked All Button 
+  // clicked All Button
   if (id == "btn-all") {
     addCards.classList.remove("hidden");
   }
@@ -76,10 +75,9 @@ function toggleStyle(id) {
   }
 
   // clicked Rejected Button
-  if(id== "btn-rejected"){
+  if (id == "btn-rejected") {
     allcards.classList.add("hidden");
   }
-  
 
   interviewSelectedAndRejectedCount();
 }
@@ -93,7 +91,7 @@ mainContainer.addEventListener("click", function (event) {
   const jobStatus = parentNode.querySelector(".jobStatus").innerText;
   const jobInfo = parentNode.querySelector(".jobInfo").innerText;
   const jobDetails = parentNode.querySelector(".jobDetails").innerText;
-  // const deleteCard = parentNode.querySelector(".deleteBtn");
+
   const parentCardDiv = event.target.closest(".card-design");
 
   // console.log(title, position, jobStatus, jobInfo, jobDetails);
@@ -116,6 +114,8 @@ mainContainer.addEventListener("click", function (event) {
       "text-red-600",
     );
     jobTitle.classList.add("border", "border-green-600", "text-green-600");
+
+    totalCalculate();
     interviewSelectedAndRejectedCount();
   } else if (event.target.classList.contains("rejected-btn")) {
     parentNode.querySelector(".jobStatus").innerText = "Rejected";
@@ -136,6 +136,7 @@ mainContainer.addEventListener("click", function (event) {
     );
 
     jobTitle.classList.add("border", "border-red-600", "text-red-600");
+    totalCalculate();
     interviewSelectedAndRejectedCount();
   } else if (event.target.closest(".deleteBtn")) {
     parentNode.remove();
@@ -143,3 +144,8 @@ mainContainer.addEventListener("click", function (event) {
     interviewSelectedAndRejectedCount();
   }
 });
+
+// empty card show
+function showEmptyCard(count){
+  let emptyMsg = document.get
+}
